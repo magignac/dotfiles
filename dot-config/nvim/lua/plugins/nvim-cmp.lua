@@ -32,6 +32,7 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
+                { name = 'copilot' },
             }),
             formatting = {
                 format = lspkind.cmp_format({
