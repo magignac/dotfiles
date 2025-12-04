@@ -25,9 +25,9 @@ _git-bind-helper() {
   eval "bindkey '$key' $fn-widget"
 }
 
-_git-bind-helper "^fh" _git-root
-_git-bind-helper "^fb" _git-current-branch
-_git-bind-helper "^fg" _git-current-commit-short
+_git-bind-helper "^gh" _git-root
+_git-bind-helper "^gb" _git-current-branch
+_git-bind-helper "^gg" _git-current-commit-short
 
 unset -f _git-bind-helper
 

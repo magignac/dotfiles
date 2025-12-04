@@ -11,7 +11,7 @@ if command -v fzf >/dev/null 2>&1; then
     }
 
     _fzf() {
-      fzf --layout=default "$@"
+      fzf --layout=default --bind "ctrl-a:select-all" "$@"
     }
 
     _fzf-join-lines() {
@@ -77,12 +77,12 @@ if command -v fzf >/dev/null 2>&1; then
       eval "bindkey '$key' $fn-widget"
     }
 
-    _fzf-bind-helper "^f^f" _fzf-git-modified-files 
-    _fzf-bind-helper "^f^b" _fzf-git-branches
-    _fzf-bind-helper "^f^t" _fzf-git-tags
-    _fzf-bind-helper "^f^g" _fzf-git-commits
-    _fzf-bind-helper "^f^r" _fzf-git-remotes
-    _fzf-bind-helper "^f^l" _fzf-git-files-in-last-commit
+    _fzf-bind-helper "^g^f" _fzf-git-modified-files 
+    _fzf-bind-helper "^g^b" _fzf-git-branches
+    _fzf-bind-helper "^g^t" _fzf-git-tags
+    _fzf-bind-helper "^g^g" _fzf-git-commits
+    _fzf-bind-helper "^g^r" _fzf-git-remotes
+    _fzf-bind-helper "^g^l" _fzf-git-files-in-last-commit
 
     unset -f _fzf-bind-helper
 fi
